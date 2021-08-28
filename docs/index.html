@@ -7,56 +7,97 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
+			@font-face {
+				font-family: 'Dancing Script';
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				src: url(./DancingScript.subset.ttf);
+			}
+			@font-face {
+				font-family: 'Noto Sans KR';
+				src: url(./NotoSansKR-Light-subset.otf) format("truetype");
+			}
+
+			* {
+				box-sizing: border-box;
+
+				font-family: 'Noto Sans KR', sans-serif;
+			}
 			body {
 				--dark: #2a2829;
-				--light-accent: #a7a9a6;
-				--light-background: #c1c1c1;
+				--light-background: #d6d3ce;
 
 				--white: #f4f4f4;
 
-				background-color: var(--light-accent);
+				background-image: url(./carpet1.jpg);
+				background-size: 100% min(120vh, 1200px);
+				/*background-position: bottom;*/
+				background-attachment: fixed;
 				padding: 0;
 				margin: 0;
+				min-height: 100vh;
 
 				display: flex;
-				flex-direction: row;
-				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			a {
+				color: #0a0aff;
 			}
 
 			header {
+				width: 100vw;
 				background-color: var(--dark);
 				color: var(--white);
 				padding: 8px 16px;
 				text-align: center;
+
+				font-family: Garamond;
 			}
 
-			.content {
+			.center_column {
 				width: 600px;
-				max-width: 100%;
-				min-height: 100vh;
+				max-width: 100vw;
 				padding: 16px;
 				background-color: var(--light-background);
+				flex-grow: 1;
+			}
+
+			.hero {
+				text-align: center;
+			}
+
+			h1 {
+				font-family: 'Dancing Script', cursive;
+				font-weight: 400;
+				font-size: 64px;
+				margin: 0;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="content">
-			<header>
-				<h1>
-					Lydia's Cleaning
-				</h1>
-			</header>
+		<header>
+			<h1>
+				Lydia's Cleaning
+			</h1>
+		</header>
+		<div class="center_column">
+			<section class=hero>
+				Contact:
+				<strong>
+					<a href="mailto:Me@LydiasCleaning.com">Me@LydiasCleaning.com</a>
+				</strong>
+			</section>
 			<section>
 				<p>Lydia's cleaning is the best, it's super-great!</p>
 				<p>What does she clean?</p>
 				<ul>
-					<li>Floors</li>
 					<li>Bathrooms</li>
 					<li>Kitchens</li>
+					<li>Floors</li>
 				</ul>
-			</section>
-			<section>
-				Contact: <a href="mailto:Me@LydiasCleaning.com">Me@LydiasCleaning.com</a>
 			</section>
 		</div>
 	</body>
